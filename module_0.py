@@ -1,4 +1,5 @@
 import numpy as np
+'''Функция угадывает загаданное число'''
 def game_core(number):
     count = 1
     predict = 50 # всегда начинает угадывать с середины диапазона
@@ -17,6 +18,6 @@ def game_core(number):
 '''Запускаем функцию 1000 раз'''
 predict_count = 0
 for i in range(1000):
-    number = np.random.randint(1, 101)
-    predict_count += game_core(number)
+    number = np.random.randint(1, 101) # Случайным образом загадывается число.
+    predict_count += game_core(number) # Сумма всех попыток.
 print(f"Ваш алгоритм угадывает число в среднем за {int(predict_count / i)} попыток")
